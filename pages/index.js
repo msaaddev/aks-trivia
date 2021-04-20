@@ -1,7 +1,26 @@
+import { useState } from 'react';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
+import questions from '../data/questions';
 
 export default function Home() {
+    const [triviaQuestions] = useState(questions);
+    const [question, setQuestion] = useState(
+        "Welcome y'all. Let's see which question you get. You will have 30 secs at most to answer it. Good luck!"
+    );
+
+    /**
+     *
+     *  get random question
+     */
+    const getQuestion = () => {
+        const randomIndex = Math.floor(Math.random() * triviaQuestions.length);
+
+        const participantQuestion = triviaQuestions[randomIndex];
+
+        setQuestion(participantQuestion);
+    };
+
     return (
         <div className={styles.container}>
             <Head>
@@ -15,7 +34,11 @@ export default function Home() {
             </Head>
 
             <div className={styles.subcontainer}>
-                <div className={styles.subcontainer_left}></div>
+                <div className={styles.subcontainer_left}>
+                    <div className={styles.question}>
+                        <p>{question}</p>
+                    </div>
+                </div>
                 <div className={styles.subcontainer_right}>
                     <div className={styles.subcontainer_right_info}>
                         <h1>Welcome to</h1>
@@ -24,8 +47,7 @@ export default function Home() {
                             <br />
                             night 2021!!
                         </h2>
-                        {/* <h2 className={styles.typing}>night 2021!!</h2> */}
-                        <button>Get Your Question</button>
+                        <button onClick={getQuestion}>Get Question</button>
                     </div>
                 </div>
             </div>
