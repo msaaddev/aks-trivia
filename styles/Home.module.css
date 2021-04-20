@@ -110,6 +110,48 @@
     cursor: pointer;
 }
 
+@media screen and (max-width: 600px) {
+    .subcontainer {
+        flex-direction: column-reverse;
+        align-content: center;
+    }
+
+    .subcontainer_right {
+        flex: 0.8;
+        margin-left: 50px;
+    }
+
+    .subcontainer_left {
+        flex: 1.2;
+        background-color: #292a2d;
+    }
+
+    .subcontainer_right_info {
+        height: 50vh;
+    }
+
+    .subcontainer_right_info h1 {
+        width: 300px;
+        font-size: 2.5rem;
+    }
+
+    .subcontainer_right_info h2 {
+        width: 300px;
+    }
+
+    .question {
+        height: 50vh;
+    }
+
+    .question p {
+        margin: 0 500px;
+        width: 300px;
+        line-height: 40px;
+        font-size: 1.5rem;
+        text-align: center;
+    }
+}
+
 /*
 #64B5F6
 #42A5F5
