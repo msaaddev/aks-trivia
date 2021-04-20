@@ -8,9 +8,13 @@
 
 .subcontainer_left {
     height: 100vh;
+    flex: 1.2;
+    background-color: #292a2d;
 }
 
 .subcontainer_right {
+    flex: 0.8;
+    margin-left: 50px;
 }
 
 .subcontainer_right_info {
