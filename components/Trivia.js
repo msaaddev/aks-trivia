@@ -10,11 +10,7 @@ const Trivia = () => {
     const [question, setQuestion] = useState(
         "Welcome y'all. Let's see which question you get. You will have 30 secs at most to answer it. Good luck!"
     );
-    const [checked, setChecked] = useState(true);
-
-    useEffect(() => {
-        backgroundMusic(false);
-    }, []);
+    const [checked, setChecked] = useState(false);
 
     /**
      *
