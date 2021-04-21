@@ -32,7 +32,7 @@ const Trivia = () => {
                     <h2 className={styles.typing}>
                         Aks trivia
                         <br />
-                        night 2021!!
+                        night 2021!!{' '}
                     </h2>
                     <button onClick={getQuestion}>Get Question</button>
                 </div>
