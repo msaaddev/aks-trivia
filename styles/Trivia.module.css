@@ -155,7 +155,7 @@
     }
 
     .subcontainer_right_info {
-        height: 47vh;
+        height: 45vh;
     }
 
     .subcontainer_right_info h1 {
@@ -180,7 +180,7 @@
     }
 
     .music {
-        height: 3vh;
+        height: 5vh;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
