@@ -1,13 +1,20 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import questions from '../data/questions';
 import Switch from '@material-ui/core/Switch';
 import styles from '../styles/Trivia.module.css';
+import { Howl, Howler } from 'howler';
+import music from '../assets/sound/music.mp3';
 
 const Trivia = () => {
     const [triviaQuestions] = useState(questions);
     const [question, setQuestion] = useState(
         "Welcome y'all. Let's see which question you get. You will have 30 secs at most to answer it. Good luck!"
     );
+    const [checked, setChecked] = useState(true);
+
+    useEffect(() => {
+        backgroundMusic(false);
+    }, []);
 
     /**
      *
@@ -20,6 +27,42 @@ const Trivia = () => {
 
         setQuestion(participantQuestion);
     };
+
+    /**
+     *
+     * @param {stopped} – stops the background sound
+     * background music of the app
+     */
+    const backgroundMusic = stopped => {
+        const bgMusic = new Howl({
+            src: music,
+            autoplay: true,
+            loop: true,
+            html5: true,
+            volume: 0.03,
+        });
+
+        if (stopped) {
+            Howler.stop();
+        } else {
+            bgMusic.play();
+        }
+    };
+
+    /**
+     *
+     * toggle music
+     */
+    const toggleMusic = () => {
+        if (checked === true) {
+            setChecked(false);
+            backgroundMusic(true);
+        } else {
+            setChecked(true);
+            backgroundMusic(false);
+        }
+    };
+
     return (
         <div className={styles.subcontainer}>
             <div className={styles.subcontainer_left}>
@@ -29,9 +72,14 @@ const Trivia = () => {
             </div>
             <div className={styles.subcontainer_right}>
                 <div className={styles.music}>
-                <label>Music</label>
+                    <label>Music</label>
                     <div className={styles.switch}>
-                        <Switch size='small' color={'primary'} />
+                        <Switch
+                            checked={checked}
+                            size='small'
+                            color={'primary'}
+                            onChange={toggleMusic}
+                        />
                     </div>
                 </div>
                 <div className={styles.subcontainer_right_info}>
