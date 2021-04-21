@@ -40,7 +40,7 @@
 }
 
 .subcontainer_right_info {
-    height: 97vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -130,6 +130,14 @@
     cursor: pointer;
 }
 
+.icons {
+    height: 7vh;
+    display: flex;
+    flex-direction: row;
+    /* width: 450px; */
+    padding-bottom: 40px;
+}
+
 @media screen and (max-width: 600px) {
     .subcontainer {
         flex-direction: column-reverse;
@@ -147,7 +155,7 @@
     }
 
     .subcontainer_right_info {
-        height: 47vh;
+        height: 44vh;
     }
 
     .subcontainer_right_info h1 {
@@ -186,6 +194,10 @@
 
     .switch {
         padding: 17px 0;
+    }
+
+    .icons {
+        display: none;
     }
 }
 

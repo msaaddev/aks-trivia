@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react';
+import Link from 'next/link';
 import questions from '../data/questions';
 import Switch from '@material-ui/core/Switch';
 import styles from '../styles/Trivia.module.css';
 import { Howl, Howler } from 'howler';
 import music from '../assets/sound/music.mp3';
+import { GitHub } from '@material-ui/icons';
 
 const Trivia = () => {
     const [triviaQuestions] = useState(questions);
@@ -86,6 +88,13 @@ const Trivia = () => {
                         night 2021!!{' '}
                     </h2>
                     <button onClick={getQuestion}>Get Question</button>
+                </div>
+                <div className={styles.icons}>
+                    <Link href='https://github.com/msaaddev'>
+                        <a>
+                            <GitHub />
+                        </a>
+                    </Link>
                 </div>
             </div>
         </div>
