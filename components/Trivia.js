@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import questions from '../data/questions';
+import Switch from '@material-ui/core/Switch';
 import styles from '../styles/Trivia.module.css';
 
 const Trivia = () => {
@@ -27,6 +28,12 @@ const Trivia = () => {
                 </div>
             </div>
             <div className={styles.subcontainer_right}>
+                <div className={styles.music}>
+                <label>Music</label>
+                    <div className={styles.switch}>
+                        <Switch size='small' color={'primary'} />
+                    </div>
+                </div>
                 <div className={styles.subcontainer_right_info}>
                     <h1>Welcome to</h1>
                     <h2 className={styles.typing}>

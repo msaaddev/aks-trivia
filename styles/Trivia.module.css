@@ -40,7 +40,7 @@
 }
 
 .subcontainer_right_info {
-    height: 100vh;
+    height: 97vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -82,6 +82,26 @@
     50% {
         border-color: transparent;
     }
+}
+
+.music {
+    height: 3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 450px;
+    margin: 0;
+}
+
+.music label {
+    text-transform: uppercase;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1rem;
+    padding-top: 40px;
+}
+
+.switch {
+    padding-top: 36px;
 }
 
 .subcontainer_right_info button {
@@ -127,7 +147,7 @@
     }
 
     .subcontainer_right_info {
-        height: 50vh;
+        height: 47vh;
     }
 
     .subcontainer_right_info h1 {
@@ -149,6 +169,23 @@
         line-height: 40px;
         font-size: 1.5rem;
         text-align: center;
+    }
+
+    .music {
+        height: 3vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 300px;
+        margin: 0;
+    }
+
+    .music label {
+        padding: 20px 0;
+    }
+
+    .switch {
+        padding: 17px 0;
     }
 }
 
