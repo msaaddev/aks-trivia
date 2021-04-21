@@ -39,7 +39,7 @@ const Trivia = () => {
             autoplay: true,
             loop: true,
             html5: true,
-            volume: 0.03,
+            volume: 0.1,
         });
 
         if (stopped) {
