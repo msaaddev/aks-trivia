@@ -37,6 +37,10 @@
 .subcontainer_right {
     flex: 0.9;
     margin-left: 80px;
+    background-image: url('../public/logo.png');
+    background-position: right;
+    background-repeat: no-repeat;
+    background-size: 420px 560px;
 }
 
 .subcontainer_right_info {
@@ -44,6 +48,10 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    /* background-color: #ffffff; */
+    /* opacity: 0.4; */
+
+
 }
 
 .subcontainer_right_info h1 {
@@ -158,6 +166,8 @@
     .subcontainer_right {
         flex: 0.8;
         margin-left: 50px;
+        background-position: center;
+        background-size: 280px 400px;
     }
 
     .subcontainer_left {
