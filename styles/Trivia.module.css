@@ -134,8 +134,19 @@
     height: 7vh;
     display: flex;
     flex-direction: row;
-    /* width: 450px; */
-    padding-bottom: 40px;
+    justify-content: space-between;
+    width: 450px;
+}
+
+.timer p {
+    font-family: 'Raleway', sans-serif;
+    margin-top: 5px;
+    font-size: 1rem;
+
+}
+
+.timer p span {
+    text-transform: uppercase;
 }
 
 @media screen and (max-width: 600px) {
