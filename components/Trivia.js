@@ -40,8 +40,6 @@ const Trivia = () => {
 		} else {
 			bgMusic.play();
 		}
-
-		console.log("function fire");
 	};
 
 	/**
