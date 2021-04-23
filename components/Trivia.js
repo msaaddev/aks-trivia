@@ -11,9 +11,9 @@ import styles from "../styles/Trivia.module.css";
 
 const Trivia = () => {
 	// states
-	const [triviaQuestions] = useState(questions);
+	const [triviaQuestions, setTriviaQuestions] = useState(questions);
 	const [question, setQuestion] = useState(
-		"Welcome y'all. Let's see which question you get. You will have 30 secs at most to answer it. Good luck!"
+		"Welcome y'all. Let's see which question you get. You will have 25 secs at most to answer it. Good luck!"
 	);
 	const [checked, setChecked] = useState(false);
 
@@ -78,13 +78,22 @@ const Trivia = () => {
 	 */
 	const getQuestion = () => {
 		reset();
+
 		const randomIndex = Math.floor(Math.random() * triviaQuestions.length);
 
 		const participantQuestion = triviaQuestions[randomIndex];
 
-		setQuestion(participantQuestion);
+		const temp = [...triviaQuestions];
+		temp.splice(randomIndex, 1);
 
-		start();
+		if (participantQuestion === undefined) {
+			setQuestion("We ran out of questions. ☹️");
+			setTriviaQuestions([]);
+		} else {
+			setQuestion(participantQuestion);
+			setTriviaQuestions(temp);
+			start();
+		}
 	};
 
 	return (
