@@ -67,7 +67,7 @@ const Trivia = () => {
 	};
 
 	// react custom hook to implement timer
-	const { time, start } = useTimer({
+	const { time, start, reset } = useTimer({
 		initialTime: 25,
 		endTime: 0,
 		timerType: "DECREMENTAL",
@@ -79,6 +79,7 @@ const Trivia = () => {
 	 *  get random question
 	 */
 	const getQuestion = () => {
+		reset();
 		const randomIndex = Math.floor(Math.random() * triviaQuestions.length);
 
 		const participantQuestion = triviaQuestions[randomIndex];
