@@ -48,5 +48,8 @@ module.exports = [
 	"Would you rather explore space or the ocean?",
 	"Would you rather live where it is constantly winter or where it is constantly summer?",
 	"Would you rather be 4’5” or 7’7”?",
-	" Would you rather go without TV or junk food for the rest of your life?",
+	"Would you rather go without TV or junk food for the rest of your life?",
+	"Would you rather be the first person to explore a planet or be the inventor of a drug that cures a deadly disease?",
+	"What Do You Wish You Were Really Good At?",
+	"What’s The Most Spontaneous Thing You’ve Ever Done?",
 ];
